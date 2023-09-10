@@ -1,0 +1,107 @@
+/*
+ * SYSTK_Program.c
+ *
+ *  Created on: Aug 15, 2023
+ *      Author: khale
+ */
+
+#include "../../LIB/BIT_MATHS.h"
+#include "../../LIB/STD_TYPES.h"
+#include"SYSTK_Interface.h"
+#include "SYSTK_Private.h"
+#include "SYSTK_Config.h"
+
+
+static void (*STK_CallBack)(void); /* Callback function pointer */
+u8 G_u8SingleFlag = 0;
+
+/** Initialize the System Timer with the specified clock source */
+void STK_voidInit (void)
+{
+	#if (SYS_CLK_CONG ==  STK_AHB_DIV8)
+		CLEAR_BIT(SYSTK->SYS_CTRL,STK_CTRL_CLKSOURCE);
+
+	#elif(SYS_CLK_CONG == STK_AHB)
+		SET_BIT(SYSTK->SYS_CTRL,2);
+
+	#endif
+}
+
+
+/** Start the System Timer with a specified preload value */
+void STK_voidStart (u32 Copy_u32PreloadValue)
+{
+	SYSTK->STK_LOAD = Copy_u32PreloadValue; /* Not -1 because of single mode */
+	SYSTK->STK_VAL = 0;
+	SET_BIT( SYSTK->SYS_CTRL,STK_CTRL_ENABLE);
+
+
+}
+
+/** Read the SysTick count flag in the Control and Status Register (CTRL) */
+u8 STK_u8ReadFlag(void)
+{
+	return GET_BIT(SYSTK->SYS_CTRL,STK_CTRL_COUNTFLAG );
+}
+
+/** Get the remaining time for the System Timer to reach zero */
+u32 STK_u32GetRemainingTime(void)
+{
+	return (SYSTK->STK_VAL);
+}
+
+/** Get the elapsed time since the System Timer started */
+u32 STK_u32GetElapsedTime  (void)
+{
+	return ((SYSTK->STK_LOAD)-(SYSTK->STK_VAL));
+
+}
+
+void STK_voidDelayUsec(u32 Copy_u32DelayUsec)
+{
+	 u32 delayForUs;
+	    /* let Clock = HSI (16M) */
+	    if (RCC_SYSCLK == RCC_HSI)
+	    {
+	        delayForUs = DELAY_FOR_US;
+	    }
+	    STK_voidStart(delayForUs * Copy_u32DelayUsec);
+}
+
+/** Implement a delay in milliseconds using the System Timer */
+void STK_voidDelayMsec(u32 copy_u32DelayMsec)
+{
+	u32 delayForMs;
+	if( RCC_SYSCLK == RCC_HSI)
+	{
+		delayForMs = DELAY_FOR_MS;
+	}
+	STK_voidStart(delayForMs * copy_u32DelayMsec);
+}
+
+/** Set a callback function to be executed when SysTick interrupt occurs */
+void STK_voidSetCallBack(void (*ptr)(void))
+{
+	STK_CallBack = ptr;
+}
+
+/** SysTick Interrupt Service Routine */
+void SysTick_Handler(void)
+{
+    if (STK_CallBack != NULL)
+    {
+        STK_CallBack();
+    }
+}
+void STK_voidSetIntervalPeriodic(u32 Copy_u32NumOfTicks, void(*Copy_pf) (void))
+{
+	/* 0- set Callback function */
+		STK_CallBack = Copy_pf;
+		G_u8SingleFlag = 0;
+		/* 1- reset timer value */
+		SYSTK->STK_VAL = 0;
+		/* 2- Load timer with Value */
+		SYSTK->STK_LOAD = Copy_u32NumOfTicks;
+		/*3- Start the timer */
+		SET_BIT(SYSTK->SYS_CTRL, ENABLE);
+}
