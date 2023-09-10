@@ -1,0 +1,173 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Ammar Wael, Helwan university, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.8.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+E:\ITI_Helwan_embeded_advanced\Keil_Workspace\FOTA-ITI-Project\FOTA-ITI-Project.uvprojx
+Project File Date:  09/10/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'FOTA-ITI-Project'
+MCAL/GPIO/GPIO_Program.c(14): error: 'BIT_MATHS.h' file not found
+#include "BIT_MATHS.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+compiling GPIO_Program.c...
+APP/main.c(25): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+1 warning generated.
+compiling main.c...
+MCAL/RCC/RCC_Program.c(12): warning: In file included from...
+./MCAL/RCC/RCC_Interface.h(20): warning: // comments are not allowed in this language [-Wcomment]
+//Peripherals IDS
+^
+MCAL/RCC/RCC_Program.c(13): warning: In file included from...
+./MCAL/RCC/RCC_Private.h(106): warning: // comments are not allowed in this language [-Wcomment]
+///MAIN PLL CLOCK INPUT
+^
+MCAL/RCC/RCC_Program.c(14): warning: In file included from...
+./MCAL/RCC/RCC_Config.h(51): warning: // comments are not allowed in this language [-Wcomment]
+//VCO output frequency = VCO input frequency Ð² PLLN with range 192MHZ <=VCO  <=432MHZ
+^
+MCAL/RCC/RCC_Program.c(31): error: use of undeclared identifier 'STD_TYPES_OK'
+        u8 Local_error_state = STD_TYPES_OK;
+                               ^
+MCAL/RCC/RCC_Program.c(34): error: use of undeclared identifier 'BIT_RESET'
+        while (GET_BIT((RCC->RCC_CR),1) == BIT_RESET);
+                                           ^
+MCAL/RCC/RCC_Program.c(104): error: use of undeclared identifier 'STD_TYPES_OK'
+        u8 Local_error_state = STD_TYPES_OK;
+                               ^
+MCAL/RCC/RCC_Program.c(109): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
+                CLEAR_BIT((RCC->RCC_CR), 18);
+                ^
+MCAL/RCC/RCC_Program.c(121): error: use of undeclared identifier 'BIT_RESET'
+        while (GET_BIT((RCC->RCC_CR),17) == BIT_RESET);
+                                            ^
+MCAL/RCC/RCC_Program.c(134): error: use of undeclared identifier 'STD_TYPES_OK'
+        u8 Local_error_state = STD_TYPES_OK;
+                               ^
+MCAL/RCC/RCC_Program.c(135): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
+        CLEAR_BIT(RCC->RCC_CR,16);
+        ^
+MCAL/RCC/RCC_Program.c(149): error: use of undeclared identifier 'STD_TYPES_OK'
+        u8 Local_error_state = STD_TYPES_OK;
+                               ^
+MCAL/RCC/RCC_Program.c(157): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
+                        CLEAR_BIT((RCC->RCC_AHB1ENR), copy_u8Peripheral);
+                        ^
+MCAL/RCC/RCC_Program.c(175): error: use of undeclared identifier 'STD_TYPES_NOK'
+                        Local_error_state = STD_TYPES_NOK
+                                            ^
+MCAL/RCC/RCC_Program.c(182): error: use of undeclared identifier 'STD_TYPES_NOK'
+                                Local_error_state = STD_TYPES_NOK;
+                                                    ^
+MCAL/RCC/RCC_Program.c(197): error: use of undeclared identifier 'STD_TYPES_OK'
+        u8 Local_error_state = STD_TYPES_OK;
+                               ^
+MCAL/RCC/RCC_Program.c(215): error: use of undeclared identifier 'STD_TYPES_NOK'
+                                Local_error_state = STD_TYPES_NOK;
+                                                    ^
+MCAL/RCC/RCC_Program.c(221): error: use of undeclared identifier 'STD_TYPES_NOK'
+                        Local_error_state = STD_TYPES_NOK;
+                                            ^
+MCAL/RCC/RCC_Program.c(236): error: use of undeclared identifier 'STD_TYPES_OK'
+        u8 Local_error_state = STD_TYPES_OK;
+                               ^
+MCAL/RCC/RCC_Program.c(240): error: use of undeclared identifier 'BIT_RESET'
+        while (GET_BIT((RCC->RCC_CR),1) == BIT_RESET);
+                                           ^
+MCAL/RCC/RCC_Program.c(255): error: use of undeclared identifier 'STD_TYPES_OK'
+        u8 Local_error_state = STD_TYPES_OK;
+                               ^
+MCAL/RCC/RCC_Program.c(257): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
+        CLEAR_BIT(RCC->RCC_CR, 0);
+        ^
+MCAL/RCC/RCC_Program.c(253): warning: no previous prototype for function 'RCC_u8DisableHSI' [-Wmissing-prototypes]
+u8 RCC_u8DisableHSI(void){
+   ^
+MCAL/RCC/RCC_Program.c(253): note: declare 'static' if the function is not intended to be used outside of this translation unit
+u8 RCC_u8DisableHSI(void){
+^
+static 
+8 warnings and 14 errors generated.
+compiling RCC_Program.c...
+MCAL/FLASH/FLASH_Program.c(57): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
+        CLEAR_BIT(FLASH->FLASH_CR,SNB3);
+        ^
+MCAL/FLASH/FLASH_Program.c(62): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        FLASH->FLASH_CR |= (Copy_u8SectorNumber<<3);
+                        ~~  ~~~~~~~~~~~~~~~~~~~^~~
+MCAL/FLASH/FLASH_Program.c(104): error: conflicting types for 'MFDI_voidFlashWrite'
+void MFDI_voidFlashWrite(u32 Copy_u32Addess, u16*Copy_ptrData, u8 Copy_u8DataLength)
+     ^
+./MCAL/FLASH/FLASH_Interface.h(77): note: previous declaration is here
+void MFDI_voidFlashWrite(u32 Copy_u32Addess,u32*Copy_ptrData,u8 Copy_u8DataLength);
+     ^
+MCAL/FLASH/FLASH_Program.c(118): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        FLASH->FLASH_CR &=~(0b11<<8);
+                            ^
+MCAL/FLASH/FLASH_Program.c(118): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        FLASH->FLASH_CR &=~(0b11<<8);
+                        ~~^~~~~~~~~~
+MCAL/FLASH/FLASH_Program.c(120): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
+        CLEAR_BIT(FLASH->FLASH_CR,PSIZE9);
+        ^
+5 warnings and 1 error generated.
+compiling FLASH_Program.c...
+".\Objects\FOTA-ITI-Project.axf" - 16 Error(s), 14 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack
+                Keil.STM32F4xx_DFP.2.17.1
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_FOTA-ITI-Project
+  C:/Users/Ammar/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Ammar/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F401xx_OPT.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f401xc.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Target not created.
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>

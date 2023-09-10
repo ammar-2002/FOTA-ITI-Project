@@ -10,6 +10,7 @@
       <TargetName>FOTA-ITI-Project</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>6190000::V6.19::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -259,17 +260,17 @@
                 <Size>0x0</Size>
               </XRAM>
               <OCR_RVCT1>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT1>
               <OCR_RVCT2>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT2>
               <OCR_RVCT3>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT3>
@@ -279,7 +280,7 @@
                 <Size>0x40000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT5>
@@ -339,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\APP;.\APP\LIB;.\HAL;.\MCAL;.\MCAL\FLASH;.\MCAL\GPIO;.\MCAL\RCC</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -382,12 +383,91 @@
       <Groups>
         <Group>
           <GroupName>APP</GroupName>
+          <Files>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\APP\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>BIT_MATH.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\APP\LIB\BIT_MATH.h</FilePath>
+            </File>
+            <File>
+              <FileName>STD_TYPES.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\APP\LIB\STD_TYPES.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>HAL</GroupName>
         </Group>
         <Group>
           <GroupName>MCAL</GroupName>
+          <Files>
+            <File>
+              <FileName>FLASH_Config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\FLASH\FLASH_Config.h</FilePath>
+            </File>
+            <File>
+              <FileName>FLASH_Interface.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\FLASH\FLASH_Interface.h</FilePath>
+            </File>
+            <File>
+              <FileName>FLASH_Private.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\FLASH\FLASH_Private.h</FilePath>
+            </File>
+            <File>
+              <FileName>FLASH_Program.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\FLASH\FLASH_Program.c</FilePath>
+            </File>
+            <File>
+              <FileName>RCC_Config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\RCC\RCC_Config.h</FilePath>
+            </File>
+            <File>
+              <FileName>RCC_Interface.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\RCC\RCC_Interface.h</FilePath>
+            </File>
+            <File>
+              <FileName>RCC_Private.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\RCC\RCC_Private.h</FilePath>
+            </File>
+            <File>
+              <FileName>RCC_Program.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\RCC\RCC_Program.c</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO_Config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\GPIO\GPIO_Config.h</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO_Interface.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\GPIO\GPIO_Interface.h</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO_Private.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\GPIO\GPIO_Private.h</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO_Program.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\GPIO\GPIO_Program.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
