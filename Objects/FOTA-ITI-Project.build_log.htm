@@ -26,7 +26,37 @@ Project File Date:  09/10/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
-Build target 'FOTA-ITI-Project'
+Rebuild target 'FOTA-ITI-Project'
+APP/main.c(16): warning: In file included from...
+./HAL/LCD\LCD_Interface.h(74): warning: unused function 'LCD_voidSendFallingEdge' [-Wunused-function]
+static void LCD_voidSendFallingEdge(void);
+            ^
+1 warning generated.
+compiling main.c...
+HAL/LCD/LCD_Program.c(22): warning: In file included from...
+./MCAL/GPIO\GPIO_Interface.h(149): warning: // comments are not allowed in this language [-Wcomment]
+#define GPIO_u8_OP_PP           0               //GPIO OPEN DRAIN MODE
+                                                ^
+1 warning generated.
+compiling LCD_Program.c...
+MCAL/SYSTK/SYSTK_Program.c(16): warning: no previous extern declaration for non-static variable 'G_u8SingleFlag' [-Wmissing-variable-declarations]
+u8 G_u8SingleFlag = 0;
+   ^
+MCAL/SYSTK/SYSTK_Program.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u8 G_u8SingleFlag = 0;
+^
+MCAL/SYSTK/SYSTK_Program.c(22): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
+                CLEAR_BIT(SYSTK->SYS_CTRL,STK_CTRL_CLKSOURCE);
+                ^
+MCAL/SYSTK/SYSTK_Program.c(89): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+void SysTick_Handler(void)
+     ^
+MCAL/SYSTK/SYSTK_Program.c(89): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_Handler(void)
+^
+static 
+3 warnings generated.
+compiling SYSTK_Program.c...
 MCAL/RCC/RCC_Program.c(12): warning: In file included from...
 ./MCAL/RCC/RCC_Interface.h(20): warning: // comments are not allowed in this language [-Wcomment]
 //Peripherals IDS
@@ -39,57 +69,48 @@ MCAL/RCC/RCC_Program.c(14): warning: In file included from...
 ./MCAL/RCC/RCC_Config.h(51): warning: // comments are not allowed in this language [-Wcomment]
 //VCO output frequency = VCO input frequency в PLLN with range 192MHZ <=VCO  <=432MHZ
 ^
-MCAL/RCC/RCC_Program.c(31): error: use of undeclared identifier 'STD_TYPES_OK'
+MCAL/RCC/RCC_Program.c(31): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         u8 Local_error_state = STD_TYPES_OK;
-                               ^
-MCAL/RCC/RCC_Program.c(34): error: use of undeclared identifier 'BIT_RESET'
-        while (GET_BIT((RCC->RCC_CR),1) == BIT_RESET);
                                            ^
-MCAL/RCC/RCC_Program.c(104): error: use of undeclared identifier 'STD_TYPES_OK'
+MCAL/RCC/RCC_Program.c(104): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         u8 Local_error_state = STD_TYPES_OK;
-                               ^
+                                           ^
 MCAL/RCC/RCC_Program.c(109): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
                 CLEAR_BIT((RCC->RCC_CR), 18);
                 ^
-MCAL/RCC/RCC_Program.c(121): error: use of undeclared identifier 'BIT_RESET'
-        while (GET_BIT((RCC->RCC_CR),17) == BIT_RESET);
-                                            ^
-MCAL/RCC/RCC_Program.c(134): error: use of undeclared identifier 'STD_TYPES_OK'
+MCAL/RCC/RCC_Program.c(134): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         u8 Local_error_state = STD_TYPES_OK;
-                               ^
+                                           ^
 MCAL/RCC/RCC_Program.c(135): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
         CLEAR_BIT(RCC->RCC_CR,16);
         ^
-MCAL/RCC/RCC_Program.c(149): error: use of undeclared identifier 'STD_TYPES_OK'
+MCAL/RCC/RCC_Program.c(149): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         u8 Local_error_state = STD_TYPES_OK;
-                               ^
+                                           ^
 MCAL/RCC/RCC_Program.c(157): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
                         CLEAR_BIT((RCC->RCC_AHB1ENR), copy_u8Peripheral);
                         ^
-MCAL/RCC/RCC_Program.c(175): error: use of undeclared identifier 'STD_TYPES_NOK'
-                        Local_error_state = STD_TYPES_NOK
-                                            ^
-MCAL/RCC/RCC_Program.c(182): error: use of undeclared identifier 'STD_TYPES_NOK'
+MCAL/RCC/RCC_Program.c(176): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        ;
+                        ^
+MCAL/RCC/RCC_Program.c(182): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                                 Local_error_state = STD_TYPES_NOK;
-                                                    ^
-MCAL/RCC/RCC_Program.c(197): error: use of undeclared identifier 'STD_TYPES_OK'
+                                                                 ^
+MCAL/RCC/RCC_Program.c(197): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         u8 Local_error_state = STD_TYPES_OK;
-                               ^
-MCAL/RCC/RCC_Program.c(215): error: use of undeclared identifier 'STD_TYPES_NOK'
-                                Local_error_state = STD_TYPES_NOK;
-                                                    ^
-MCAL/RCC/RCC_Program.c(221): error: use of undeclared identifier 'STD_TYPES_NOK'
-                        Local_error_state = STD_TYPES_NOK;
-                                            ^
-MCAL/RCC/RCC_Program.c(236): error: use of undeclared identifier 'STD_TYPES_OK'
-        u8 Local_error_state = STD_TYPES_OK;
-                               ^
-MCAL/RCC/RCC_Program.c(240): error: use of undeclared identifier 'BIT_RESET'
-        while (GET_BIT((RCC->RCC_CR),1) == BIT_RESET);
                                            ^
-MCAL/RCC/RCC_Program.c(255): error: use of undeclared identifier 'STD_TYPES_OK'
+MCAL/RCC/RCC_Program.c(215): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                Local_error_state = STD_TYPES_NOK;
+                                                                 ^
+MCAL/RCC/RCC_Program.c(221): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Local_error_state = STD_TYPES_NOK;
+                                                         ^
+MCAL/RCC/RCC_Program.c(236): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         u8 Local_error_state = STD_TYPES_OK;
-                               ^
+                                           ^
+MCAL/RCC/RCC_Program.c(255): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        u8 Local_error_state = STD_TYPES_OK;
+                                           ^
 MCAL/RCC/RCC_Program.c(257): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
         CLEAR_BIT(RCC->RCC_CR, 0);
         ^
@@ -100,59 +121,14 @@ MCAL/RCC/RCC_Program.c(253): note: declare 'static' if the function is not inten
 u8 RCC_u8DisableHSI(void){
 ^
 static 
-8 warnings and 14 errors generated.
+19 warnings generated.
 compiling RCC_Program.c...
-APP/main.c(16): warning: In file included from...
-./HAL/LCD\LCD_Interface.h(83): error: unknown type name 'u8'
-void LCD_voidSendCmd(u8 Copy_u8Cmd);
-                     ^
-./HAL/LCD\LCD_Interface.h(94): error: unknown type name 'u8'
-void LCD_voidSendChar(u8 Copy_u8Data);
-                      ^
-./HAL/LCD\LCD_Interface.h(105): error: unknown type name 'u8'
-void LCD_voidSendString(u8 *Copy_ptrData);
-                        ^
-./HAL/LCD\LCD_Interface.h(127): error: unknown type name 'u8'
-void LCD_voidMoveCursor(u8 Copy_u8Row,u8 Copy_u8Coloumn);
-                        ^
-./HAL/LCD\LCD_Interface.h(127): error: unknown type name 'u8'
-void LCD_voidMoveCursor(u8 Copy_u8Row,u8 Copy_u8Coloumn);
-                                      ^
-5 errors generated.
-compiling main.c...
-MCAL/SYSTK/SYSTK_Program.c(16): warning: no previous extern declaration for non-static variable 'G_u8SingleFlag' [-Wmissing-variable-declarations]
-u8 G_u8SingleFlag = 0;
-   ^
-MCAL/SYSTK/SYSTK_Program.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-u8 G_u8SingleFlag = 0;
-^
-MCAL/SYSTK/SYSTK_Program.c(22): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
-                CLEAR_BIT(SYSTK->SYS_CTRL,STK_CTRL_CLKSOURCE);
-                ^
-MCAL/SYSTK/SYSTK_Program.c(91): error: use of undeclared identifier 'NULL'
-    if (STK_CallBack != NULL)
-                        ^
-MCAL/SYSTK/SYSTK_Program.c(89): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
-void SysTick_Handler(void)
-     ^
-MCAL/SYSTK/SYSTK_Program.c(89): note: declare 'static' if the function is not intended to be used outside of this translation unit
-void SysTick_Handler(void)
-^
-static 
-3 warnings and 1 error generated.
-compiling SYSTK_Program.c...
 MCAL/FLASH/FLASH_Program.c(57): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
         CLEAR_BIT(FLASH->FLASH_CR,SNB3);
         ^
 MCAL/FLASH/FLASH_Program.c(62): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
         FLASH->FLASH_CR |= (Copy_u8SectorNumber<<3);
                         ~~  ~~~~~~~~~~~~~~~~~~~^~~
-MCAL/FLASH/FLASH_Program.c(104): error: conflicting types for 'MFDI_voidFlashWrite'
-void MFDI_voidFlashWrite(u32 Copy_u32Addess, u16*Copy_ptrData, u8 Copy_u8DataLength)
-     ^
-./MCAL/FLASH/FLASH_Interface.h(77): note: previous declaration is here
-void MFDI_voidFlashWrite(u32 Copy_u32Addess,u32*Copy_ptrData,u8 Copy_u8DataLength);
-     ^
 MCAL/FLASH/FLASH_Program.c(118): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
         FLASH->FLASH_CR &=~(0b11<<8);
                             ^
@@ -162,7 +138,7 @@ MCAL/FLASH/FLASH_Program.c(118): warning: implicit conversion changes signedness
 MCAL/FLASH/FLASH_Program.c(120): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
         CLEAR_BIT(FLASH->FLASH_CR,PSIZE9);
         ^
-5 warnings and 1 error generated.
+5 warnings generated.
 compiling FLASH_Program.c...
 MCAL/GPIO/GPIO_Program.c(15): warning: In file included from...
 ./MCAL/GPIO/GPIO_Interface.h(149): warning: // comments are not allowed in this language [-Wcomment]
@@ -172,86 +148,137 @@ MCAL/GPIO/GPIO_Program.c(16): warning: In file included from...
 ./MCAL/GPIO/GPIO_Private.h(20): warning: // comments are not allowed in this language [-Wcomment]
 //Register GPIOx_MODER BITS  mask
 ^
-MCAL/GPIO/GPIO_Program.c(35): error: use of undeclared identifier 'STD_TYPES_OK'
+MCAL/GPIO/GPIO_Program.c(35): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         u8 Local_Error_state = STD_TYPES_OK;
-                               ^
-MCAL/GPIO/GPIO_Program.c(38): error: use of undeclared identifier 'STD_TYPES_NOK'
+                                           ^
+MCAL/GPIO/GPIO_Program.c(38): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                         Local_Error_state = STD_TYPES_NOK;
-                                            ^
+                                                         ^
 MCAL/GPIO/GPIO_Program.c(42): warning: // comments are not allowed in this language [-Wcomment]
                                 //USE modify register to modify the value of corresponding GPIOXModer bits
                                 ^
 MCAL/GPIO/GPIO_Program.c(43): warning: implicit declaration of function 'MODIFY_REG' [-Wimplicit-function-declaration]
                                 MODIFY_REG(GPIOA->GPIO_MODER, (copy_u8PinMode << copy_u8PinId*2),(GPIOX_MODER_MODER0<<copy_u8PinId*2));
                                 ^
-MCAL/GPIO/GPIO_Program.c(52): error: expected ';' after expression
-                                Local_Error_state = STD_TYPES_NOK
-                                                                 ^
-                                                                 ;
-MCAL/GPIO/GPIO_Program.c(52): error: use of undeclared identifier 'STD_TYPES_NOK'
-                                Local_Error_state = STD_TYPES_NOK
-                                                    ^
-MCAL/GPIO/GPIO_Program.c(58): error: use of undeclared identifier 'STD_TYPES_NOK'
+MCAL/GPIO/GPIO_Program.c(58): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 Local_Error_state = STD_TYPES_NOK;
-                                    ^
-MCAL/GPIO/GPIO_Program.c(80): error: use of undeclared identifier 'STD_TYPES_OK'
+                                                 ^
+MCAL/GPIO/GPIO_Program.c(80): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         u8 Local_Error_state = STD_TYPES_OK;
-                               ^
-MCAL/GPIO/GPIO_Program.c(83): error: use of undeclared identifier 'STD_TYPES_NOK'
+                                           ^
+MCAL/GPIO/GPIO_Program.c(83): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                                 Local_Error_state = STD_TYPES_NOK;
-                                                    ^
+                                                                 ^
 MCAL/GPIO/GPIO_Program.c(88): warning: implicit declaration of function 'MODIFY_REG' [-Wimplicit-function-declaration]
                                         MODIFY_REG(GPIOA->GPIO_OTYPER, (copy_u8PinType << copy_u8PinId),(GPIOX_OTYPER_OT0<<copy_u8PinId));
                                         ^
-MCAL/GPIO/GPIO_Program.c(97): error: expected ';' after expression
-                                        Local_Error_state = STD_TYPES_NOK
-                                                                         ^
-                                                                         ;
-MCAL/GPIO/GPIO_Program.c(97): error: use of undeclared identifier 'STD_TYPES_NOK'
-                                        Local_Error_state = STD_TYPES_NOK
-                                                            ^
-MCAL/GPIO/GPIO_Program.c(103): error: use of undeclared identifier 'STD_TYPES_NOK'
+MCAL/GPIO/GPIO_Program.c(103): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                         Local_Error_state = STD_TYPES_NOK;
-                                            ^
-MCAL/GPIO/GPIO_Program.c(125): error: use of undeclared identifier 'STD_TYPES_OK'
+                                                         ^
+MCAL/GPIO/GPIO_Program.c(125): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         u8 Local_Error_state = STD_TYPES_OK;
-                               ^
-MCAL/GPIO/GPIO_Program.c(128): error: use of undeclared identifier 'STD_TYPES_NOK'
+                                           ^
+MCAL/GPIO/GPIO_Program.c(128): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                         Local_Error_state = STD_TYPES_NOK;
-                                            ^
+                                                         ^
 MCAL/GPIO/GPIO_Program.c(133): warning: implicit declaration of function 'MODIFY_REG' [-Wimplicit-function-declaration]
                                 MODIFY_REG(GPIOA->GPIO_OSPEEDR, (copy_u8PinSpeed << copy_u8PinId*2),(GPIOX_OSPEEDR_OSPEEDR0<<copy_u8PinId*2));
                                 ^
-MCAL/GPIO/GPIO_Program.c(142): error: expected ';' after expression
-                                Local_Error_state = STD_TYPES_NOK
-                                                                 ^
-                                                                 ;
-MCAL/GPIO/GPIO_Program.c(142): error: use of undeclared identifier 'STD_TYPES_NOK'
-                                Local_Error_state = STD_TYPES_NOK
-                                                    ^
-MCAL/GPIO/GPIO_Program.c(148): error: use of undeclared identifier 'STD_TYPES_NOK'
+MCAL/GPIO/GPIO_Program.c(148): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 Local_Error_state = STD_TYPES_NOK;
-                                    ^
-MCAL/GPIO/GPIO_Program.c(170): error: use of undeclared identifier 'STD_TYPES_OK'
+                                                 ^
+MCAL/GPIO/GPIO_Program.c(170): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 u8 Local_Error_state = STD_TYPES_OK;
-                                       ^
-MCAL/GPIO/GPIO_Program.c(173): error: use of undeclared identifier 'STD_TYPES_NOK'
+                                                   ^
+MCAL/GPIO/GPIO_Program.c(173): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                                 Local_Error_state = STD_TYPES_NOK;
-                                                    ^
+                                                                 ^
 MCAL/GPIO/GPIO_Program.c(178): warning: implicit declaration of function 'MODIFY_REG' [-Wimplicit-function-declaration]
                                         MODIFY_REG(GPIOA->GPIO_PUPDR, (copy_u8PinPullMode << copy_u8PinId*2),(GPIOX_PUPDR_PUPDR0<<copy_u8PinId*2));
                                         ^
-MCAL/GPIO/GPIO_Program.c(187): error: expected ';' after expression
-                                        Local_Error_state = STD_TYPES_NOK
-                                                                         ^
-                                                                         ;
-MCAL/GPIO/GPIO_Program.c(187): error: use of undeclared identifier 'STD_TYPES_NOK'
-                                        Local_Error_state = STD_TYPES_NOK
-                                                            ^
-fatal error: too many errors emitted, stopping now [-ferror-limit=]
-7 warnings and 20 errors generated.
+MCAL/GPIO/GPIO_Program.c(193): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Local_Error_state = STD_TYPES_NOK;
+                                                         ^
+MCAL/GPIO/GPIO_Program.c(211): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        u8 Local_Error_state = STD_TYPES_OK;
+                                           ^
+MCAL/GPIO/GPIO_Program.c(214): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Local_Error_state = STD_TYPES_NOK;
+                                                         ^
+MCAL/GPIO/GPIO_Program.c(233): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                Local_Error_state = STD_TYPES_NOK;
+                                                 ^
+MCAL/GPIO/GPIO_Program.c(211): warning: variable 'Local_Error_state' set but not used [-Wunused-but-set-variable]
+        u8 Local_Error_state = STD_TYPES_OK;
+           ^
+MCAL/GPIO/GPIO_Program.c(255): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        u8 Local_Error_state = STD_TYPES_OK;
+                                           ^
+MCAL/GPIO/GPIO_Program.c(258): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Local_Error_state = STD_TYPES_NOK;
+                                                         ^
+MCAL/GPIO/GPIO_Program.c(262): warning: implicit declaration of function 'MODIFY_REG' [-Wimplicit-function-declaration]
+                                MODIFY_REG(GPIOA->GPIO_ODR, (copy_u8PinOutVal << copy_u8PinId),(GPIOX_ODR_ODR0<<copy_u8PinId));
+                                ^
+MCAL/GPIO/GPIO_Program.c(277): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                Local_Error_state = STD_TYPES_NOK;
+                                                 ^
+MCAL/GPIO/GPIO_Program.c(299): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        ;
+        ^
+MCAL/GPIO/GPIO_Program.c(303): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        ;
+                        ^
+MCAL/GPIO/GPIO_Program.c(324): warning: operator '<<' has lower precedence than '+'; '+' will be evaluated first [-Wshift-op-parentheses]
+                                        SET_BIT(GPIOA->GPIO_BSRR,copy_u8PinId+16);
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+./APP/LIB\BIT_MATH.h(11): note: expanded from macro 'SET_BIT'
+#define SET_BIT(reg,bit)   (reg |= (1<<bit))
+                                     ~~^~~
+MCAL/GPIO/GPIO_Program.c(324): note: place parentheses around the '+' expression to silence this warning
+                                        SET_BIT(GPIOA->GPIO_BSRR,copy_u8PinId+16);
+                                                                 ~~~~~~~~~~~~^~~
+./APP/LIB\BIT_MATH.h(11): note: expanded from macro 'SET_BIT'
+#define SET_BIT(reg,bit)   (reg |= (1<<bit))
+                                       ^~~
+MCAL/GPIO/GPIO_Program.c(327): warning: operator '<<' has lower precedence than '+'; '+' will be evaluated first [-Wshift-op-parentheses]
+                                        SET_BIT(GPIOB->GPIO_BSRR,copy_u8PinId+16);
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+./APP/LIB\BIT_MATH.h(11): note: expanded from macro 'SET_BIT'
+#define SET_BIT(reg,bit)   (reg |= (1<<bit))
+                                     ~~^~~
+MCAL/GPIO/GPIO_Program.c(327): note: place parentheses around the '+' expression to silence this warning
+                                        SET_BIT(GPIOB->GPIO_BSRR,copy_u8PinId+16);
+                                                                 ~~~~~~~~~~~~^~~
+./APP/LIB\BIT_MATH.h(11): note: expanded from macro 'SET_BIT'
+#define SET_BIT(reg,bit)   (reg |= (1<<bit))
+                                       ^~~
+MCAL/GPIO/GPIO_Program.c(331): warning: operator '<<' has lower precedence than '+'; '+' will be evaluated first [-Wshift-op-parentheses]
+                                        SET_BIT(GPIOC->GPIO_BSRR,copy_u8PinId+16);
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+./APP/LIB\BIT_MATH.h(11): note: expanded from macro 'SET_BIT'
+#define SET_BIT(reg,bit)   (reg |= (1<<bit))
+                                     ~~^~~
+MCAL/GPIO/GPIO_Program.c(331): note: place parentheses around the '+' expression to silence this warning
+                                        SET_BIT(GPIOC->GPIO_BSRR,copy_u8PinId+16);
+                                                                 ~~~~~~~~~~~~^~~
+./APP/LIB\BIT_MATH.h(11): note: expanded from macro 'SET_BIT'
+#define SET_BIT(reg,bit)   (reg |= (1<<bit))
+                                       ^~~
+MCAL/GPIO/GPIO_Program.c(341): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                ;
+                ^
+33 warnings generated.
 compiling GPIO_Program.c...
-".\Objects\FOTA-ITI-Project.axf" - 40 Error(s), 23 Warning(s).
+assembling startup_stm32f401xc.s...
+compiling system_stm32f4xx.c...
+linking...
+.\Objects\FOTA-ITI-Project.axf: Error: L6218E: Undefined symbol CLEAR_BIT (referred from flash_program.o).
+.\Objects\FOTA-ITI-Project.axf: Error: L6218E: Undefined symbol MODIFY_REG (referred from gpio_program.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 2 error messages.
+".\Objects\FOTA-ITI-Project.axf" - 2 Error(s), 62 Warning(s).
 
 <h2>Software Packages used:</h2>
 

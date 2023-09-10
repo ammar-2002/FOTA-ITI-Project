@@ -74,7 +74,7 @@ void MFDI_voidMassErase(void);
 /* 2- Function Input       -> Copy_u32Addess , *Copy_ptrData,    Copy_u8DataLength                                             */
 /* 3- Function Return      -> NoThing                                                                 */
 /*******************************************************************************************************/
-void MFDI_voidFlashWrite(u32 Copy_u32Addess, u16*Copy_ptrData, u8 Copy_u8DataLength);
+void MFDI_voidFlashWrite(u32 Copy_u32Addess,u32*Copy_ptrData,u8 Copy_u8DataLength);
 
 
 #endif /* REPO_MCAL_FLASH_FLASH_INTERFACE_H_ */

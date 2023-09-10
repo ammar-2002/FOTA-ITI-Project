@@ -1,27 +1,28 @@
 Dependencies for Project 'FOTA-ITI-Project', Target 'FOTA-ITI-Project': (DO NOT MODIFY !)
 CompilerVersion: 6190000::V6.19::ARMCLANG
 F (.\APP\main.c)(0x64FE086A)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./APP -I ./APP/LIB -I ./HAL -I ./MCAL -I ./MCAL/FLASH -I ./MCAL/GPIO -I ./MCAL/RCC -I ./MCAL/SYSTK -I ./HAL/LCD-I./RTE/_FOTA-ITI-Project-IC:/Users/Ammar/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Ammar/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F401xC -D_RTE_-o ./objects/main.o -MD)
-I (HAL\LCD\LCD_Interface.h)(0x64FE0666)
+I (HAL\LCD\LCD_Interface.h)(0x64FE2384)
+I (APP\LIB\STD_TYPES.h)(0x64FE234A)
 F (.\APP\LIB\BIT_MATH.h)(0x64FE0395)()
-F (.\APP\LIB\STD_TYPES.h)(0x64FE0395)()
+F (.\APP\LIB\STD_TYPES.h)(0x64FE234A)()
 F (.\HAL\LCD\LCD_Config.h)(0x64FE0666)()
-F (.\HAL\LCD\LCD_Interface.h)(0x64FE0666)()
+F (.\HAL\LCD\LCD_Interface.h)(0x64FE2384)()
 F (.\HAL\LCD\LCD_Private.h)(0x64FE0666)()
 F (.\HAL\LCD\LCD_Program.c)(0x64FE0773)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./APP -I ./APP/LIB -I ./HAL -I ./MCAL -I ./MCAL/FLASH -I ./MCAL/GPIO -I ./MCAL/RCC -I ./MCAL/SYSTK -I ./HAL/LCD-I./RTE/_FOTA-ITI-Project-IC:/Users/Ammar/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Ammar/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F401xC -D_RTE_-o ./objects/lcd_program.o -MD)
-I (APP\LIB\STD_TYPES.h)(0x64FE0395)
+I (APP\LIB\STD_TYPES.h)(0x64FE234A)
 I (APP\LIB\BIT_MATH.h)(0x64FE0395)
 I (MCAL\SYSTK\SYSTK_Interface.h)(0x64FE0666)
 I (MCAL\GPIO\GPIO_Interface.h)(0x64FE0395)
-I (HAL\LCD\LCD_Interface.h)(0x64FE0666)
+I (HAL\LCD\LCD_Interface.h)(0x64FE2384)
 I (HAL\LCD\LCD_Config.h)(0x64FE0666)
 I (HAL\LCD\LCD_Private.h)(0x64FE0666)
 F (.\MCAL\FLASH\FLASH_Config.h)(0x64FE0395)()
-F (.\MCAL\FLASH\FLASH_Interface.h)(0x64FE0395)()
+F (.\MCAL\FLASH\FLASH_Interface.h)(0x64FE23F1)()
 F (.\MCAL\FLASH\FLASH_Private.h)(0x64FE0395)()
 F (.\MCAL\FLASH\FLASH_Program.c)(0x64FE04E6)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./APP -I ./APP/LIB -I ./HAL -I ./MCAL -I ./MCAL/FLASH -I ./MCAL/GPIO -I ./MCAL/RCC -I ./MCAL/SYSTK -I ./HAL/LCD-I./RTE/_FOTA-ITI-Project-IC:/Users/Ammar/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Ammar/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F401xC -D_RTE_-o ./objects/flash_program.o -MD)
-I (APP\LIB\STD_TYPES.h)(0x64FE0395)
+I (APP\LIB\STD_TYPES.h)(0x64FE234A)
 I (APP\LIB\BIT_MATH.h)(0x64FE0395)
-I (MCAL\FLASH\FLASH_Interface.h)(0x64FE0395)
+I (MCAL\FLASH\FLASH_Interface.h)(0x64FE23F1)
 I (MCAL\FLASH\FLASH_Config.h)(0x64FE0395)
 I (MCAL\FLASH\FLASH_Private.h)(0x64FE0395)
 F (.\MCAL\RCC\RCC_Config.h)(0x64FE0395)()
@@ -29,7 +30,7 @@ F (.\MCAL\RCC\RCC_Interface.h)(0x64FE0395)()
 F (.\MCAL\RCC\RCC_Private.h)(0x64FE0395)()
 F (.\MCAL\RCC\RCC_Program.c)(0x64FE0522)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./APP -I ./APP/LIB -I ./HAL -I ./MCAL -I ./MCAL/FLASH -I ./MCAL/GPIO -I ./MCAL/RCC -I ./MCAL/SYSTK -I ./HAL/LCD-I./RTE/_FOTA-ITI-Project-IC:/Users/Ammar/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Ammar/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F401xC -D_RTE_-o ./objects/rcc_program.o -MD)
 I (APP\LIB\BIT_MATH.h)(0x64FE0395)
-I (APP\LIB\STD_TYPES.h)(0x64FE0395)
+I (APP\LIB\STD_TYPES.h)(0x64FE234A)
 I (MCAL\RCC\RCC_Interface.h)(0x64FE0395)
 I (MCAL\RCC\RCC_Private.h)(0x64FE0395)
 I (MCAL\RCC\RCC_Config.h)(0x64FE0395)
@@ -37,7 +38,7 @@ F (.\MCAL\GPIO\GPIO_Config.h)(0x64FE0395)()
 F (.\MCAL\GPIO\GPIO_Interface.h)(0x64FE0395)()
 F (.\MCAL\GPIO\GPIO_Private.h)(0x64FE0395)()
 F (.\MCAL\GPIO\GPIO_Program.c)(0x64FE0702)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./APP -I ./APP/LIB -I ./HAL -I ./MCAL -I ./MCAL/FLASH -I ./MCAL/GPIO -I ./MCAL/RCC -I ./MCAL/SYSTK -I ./HAL/LCD-I./RTE/_FOTA-ITI-Project-IC:/Users/Ammar/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Ammar/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F401xC -D_RTE_-o ./objects/gpio_program.o -MD)
-I (APP\LIB\STD_TYPES.h)(0x64FE0395)
+I (APP\LIB\STD_TYPES.h)(0x64FE234A)
 I (APP\LIB\BIT_MATH.h)(0x64FE0395)
 I (MCAL\GPIO\GPIO_Interface.h)(0x64FE0395)
 I (MCAL\GPIO\GPIO_Private.h)(0x64FE0395)
@@ -47,7 +48,7 @@ F (.\MCAL\SYSTK\SYSTK_Interface.h)(0x64FE0666)()
 F (.\MCAL\SYSTK\SYSTK_Private.h)(0x64FE074F)()
 F (.\MCAL\SYSTK\SYSTK_Program.c)(0x64FE074F)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./APP -I ./APP/LIB -I ./HAL -I ./MCAL -I ./MCAL/FLASH -I ./MCAL/GPIO -I ./MCAL/RCC -I ./MCAL/SYSTK -I ./HAL/LCD-I./RTE/_FOTA-ITI-Project-IC:/Users/Ammar/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Ammar/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F401xC -D_RTE_-o ./objects/systk_program.o -MD)
 I (APP\LIB\BIT_MATH.h)(0x64FE0395)
-I (APP\LIB\STD_TYPES.h)(0x64FE0395)
+I (APP\LIB\STD_TYPES.h)(0x64FE234A)
 I (MCAL\SYSTK\SYSTK_Interface.h)(0x64FE0666)
 I (MCAL\SYSTK\SYSTK_Private.h)(0x64FE074F)
 I (MCAL\SYSTK\SYSTK_Config.h)(0x64FE0666)

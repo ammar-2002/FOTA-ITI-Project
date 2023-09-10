@@ -13,8 +13,6 @@
 #ifndef REPO_HAL_LCD_LCD_INTERFACE_H_
 #define REPO_HAL_LCD_LCD_INTERFACE_H_
 
-#include "STD_TYPES.h"
-
 #define PORT1	GPIOA
 #define PORT2	GPIOB
 /* All  LCD Commands */
