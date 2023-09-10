@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\APP;.\APP\LIB;.\HAL;.\MCAL;.\MCAL\FLASH;.\MCAL\GPIO;.\MCAL\RCC</IncludePath>
+              <IncludePath>.\APP;.\APP\LIB;.\HAL;.\MCAL;.\MCAL\FLASH;.\MCAL\GPIO;.\MCAL\RCC;.\MCAL\SYSTK;.\HAL\LCD</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -403,6 +403,28 @@
         </Group>
         <Group>
           <GroupName>HAL</GroupName>
+          <Files>
+            <File>
+              <FileName>LCD_Config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\LCD\LCD_Config.h</FilePath>
+            </File>
+            <File>
+              <FileName>LCD_Interface.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\LCD\LCD_Interface.h</FilePath>
+            </File>
+            <File>
+              <FileName>LCD_Private.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\LCD\LCD_Private.h</FilePath>
+            </File>
+            <File>
+              <FileName>LCD_Program.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\LCD\LCD_Program.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>MCAL</GroupName>
@@ -466,6 +488,26 @@
               <FileName>GPIO_Program.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\MCAL\GPIO\GPIO_Program.c</FilePath>
+            </File>
+            <File>
+              <FileName>SYSTK_Config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\SYSTK\SYSTK_Config.h</FilePath>
+            </File>
+            <File>
+              <FileName>SYSTK_Interface.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\SYSTK\SYSTK_Interface.h</FilePath>
+            </File>
+            <File>
+              <FileName>SYSTK_Private.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\SYSTK\SYSTK_Private.h</FilePath>
+            </File>
+            <File>
+              <FileName>SYSTK_Program.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\SYSTK\SYSTK_Program.c</FilePath>
             </File>
           </Files>
         </Group>

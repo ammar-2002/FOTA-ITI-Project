@@ -27,16 +27,28 @@ Project File Date:  09/10/2023
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'FOTA-ITI-Project'
-MCAL/GPIO/GPIO_Program.c(14): error: 'BIT_MATHS.h' file not found
-#include "BIT_MATHS.h"
-         ^~~~~~~~~~~~~
-1 error generated.
-compiling GPIO_Program.c...
-APP/main.c(25): warning: no newline at end of file [-Wnewline-eof]
-}
- ^
-1 warning generated.
 compiling main.c...
+MCAL/SYSTK/SYSTK_Program.c(16): warning: no previous extern declaration for non-static variable 'G_u8SingleFlag' [-Wmissing-variable-declarations]
+u8 G_u8SingleFlag = 0;
+   ^
+MCAL/SYSTK/SYSTK_Program.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u8 G_u8SingleFlag = 0;
+^
+MCAL/SYSTK/SYSTK_Program.c(22): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
+                CLEAR_BIT(SYSTK->SYS_CTRL,STK_CTRL_CLKSOURCE);
+                ^
+MCAL/SYSTK/SYSTK_Program.c(91): error: use of undeclared identifier 'NULL'
+    if (STK_CallBack != NULL)
+                        ^
+MCAL/SYSTK/SYSTK_Program.c(89): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+void SysTick_Handler(void)
+     ^
+MCAL/SYSTK/SYSTK_Program.c(89): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_Handler(void)
+^
+static 
+3 warnings and 1 error generated.
+compiling SYSTK_Program.c...
 MCAL/RCC/RCC_Program.c(12): warning: In file included from...
 ./MCAL/RCC/RCC_Interface.h(20): warning: // comments are not allowed in this language [-Wcomment]
 //Peripherals IDS
@@ -135,7 +147,94 @@ MCAL/FLASH/FLASH_Program.c(120): warning: implicit declaration of function 'CLEA
         ^
 5 warnings and 1 error generated.
 compiling FLASH_Program.c...
-".\Objects\FOTA-ITI-Project.axf" - 16 Error(s), 14 Warning(s).
+MCAL/GPIO/GPIO_Program.c(15): warning: In file included from...
+./MCAL/GPIO/GPIO_Interface.h(149): warning: // comments are not allowed in this language [-Wcomment]
+#define GPIO_u8_OP_PP           0               //GPIO OPEN DRAIN MODE
+                                                ^
+MCAL/GPIO/GPIO_Program.c(16): warning: In file included from...
+./MCAL/GPIO/GPIO_Private.h(20): warning: // comments are not allowed in this language [-Wcomment]
+//Register GPIOx_MODER BITS  mask
+^
+MCAL/GPIO/GPIO_Program.c(35): error: use of undeclared identifier 'STD_TYPES_OK'
+        u8 Local_Error_state = STD_TYPES_OK;
+                               ^
+MCAL/GPIO/GPIO_Program.c(38): error: use of undeclared identifier 'STD_TYPES_NOK'
+                        Local_Error_state = STD_TYPES_NOK;
+                                            ^
+MCAL/GPIO/GPIO_Program.c(42): warning: // comments are not allowed in this language [-Wcomment]
+                                //USE modify register to modify the value of corresponding GPIOXModer bits
+                                ^
+MCAL/GPIO/GPIO_Program.c(43): warning: implicit declaration of function 'MODIFY_REG' [-Wimplicit-function-declaration]
+                                MODIFY_REG(GPIOA->GPIO_MODER, (copy_u8PinMode << copy_u8PinId*2),(GPIOX_MODER_MODER0<<copy_u8PinId*2));
+                                ^
+MCAL/GPIO/GPIO_Program.c(52): error: expected ';' after expression
+                                Local_Error_state = STD_TYPES_NOK
+                                                                 ^
+                                                                 ;
+MCAL/GPIO/GPIO_Program.c(52): error: use of undeclared identifier 'STD_TYPES_NOK'
+                                Local_Error_state = STD_TYPES_NOK
+                                                    ^
+MCAL/GPIO/GPIO_Program.c(58): error: use of undeclared identifier 'STD_TYPES_NOK'
+                Local_Error_state = STD_TYPES_NOK;
+                                    ^
+MCAL/GPIO/GPIO_Program.c(80): error: use of undeclared identifier 'STD_TYPES_OK'
+        u8 Local_Error_state = STD_TYPES_OK;
+                               ^
+MCAL/GPIO/GPIO_Program.c(83): error: use of undeclared identifier 'STD_TYPES_NOK'
+                                Local_Error_state = STD_TYPES_NOK;
+                                                    ^
+MCAL/GPIO/GPIO_Program.c(88): warning: implicit declaration of function 'MODIFY_REG' [-Wimplicit-function-declaration]
+                                        MODIFY_REG(GPIOA->GPIO_OTYPER, (copy_u8PinType << copy_u8PinId),(GPIOX_OTYPER_OT0<<copy_u8PinId));
+                                        ^
+MCAL/GPIO/GPIO_Program.c(97): error: expected ';' after expression
+                                        Local_Error_state = STD_TYPES_NOK
+                                                                         ^
+                                                                         ;
+MCAL/GPIO/GPIO_Program.c(97): error: use of undeclared identifier 'STD_TYPES_NOK'
+                                        Local_Error_state = STD_TYPES_NOK
+                                                            ^
+MCAL/GPIO/GPIO_Program.c(103): error: use of undeclared identifier 'STD_TYPES_NOK'
+                        Local_Error_state = STD_TYPES_NOK;
+                                            ^
+MCAL/GPIO/GPIO_Program.c(125): error: use of undeclared identifier 'STD_TYPES_OK'
+        u8 Local_Error_state = STD_TYPES_OK;
+                               ^
+MCAL/GPIO/GPIO_Program.c(128): error: use of undeclared identifier 'STD_TYPES_NOK'
+                        Local_Error_state = STD_TYPES_NOK;
+                                            ^
+MCAL/GPIO/GPIO_Program.c(133): warning: implicit declaration of function 'MODIFY_REG' [-Wimplicit-function-declaration]
+                                MODIFY_REG(GPIOA->GPIO_OSPEEDR, (copy_u8PinSpeed << copy_u8PinId*2),(GPIOX_OSPEEDR_OSPEEDR0<<copy_u8PinId*2));
+                                ^
+MCAL/GPIO/GPIO_Program.c(142): error: expected ';' after expression
+                                Local_Error_state = STD_TYPES_NOK
+                                                                 ^
+                                                                 ;
+MCAL/GPIO/GPIO_Program.c(142): error: use of undeclared identifier 'STD_TYPES_NOK'
+                                Local_Error_state = STD_TYPES_NOK
+                                                    ^
+MCAL/GPIO/GPIO_Program.c(148): error: use of undeclared identifier 'STD_TYPES_NOK'
+                Local_Error_state = STD_TYPES_NOK;
+                                    ^
+MCAL/GPIO/GPIO_Program.c(170): error: use of undeclared identifier 'STD_TYPES_OK'
+                u8 Local_Error_state = STD_TYPES_OK;
+                                       ^
+MCAL/GPIO/GPIO_Program.c(173): error: use of undeclared identifier 'STD_TYPES_NOK'
+                                Local_Error_state = STD_TYPES_NOK;
+                                                    ^
+MCAL/GPIO/GPIO_Program.c(178): warning: implicit declaration of function 'MODIFY_REG' [-Wimplicit-function-declaration]
+                                        MODIFY_REG(GPIOA->GPIO_PUPDR, (copy_u8PinPullMode << copy_u8PinId*2),(GPIOX_PUPDR_PUPDR0<<copy_u8PinId*2));
+                                        ^
+MCAL/GPIO/GPIO_Program.c(187): error: expected ';' after expression
+                                        Local_Error_state = STD_TYPES_NOK
+                                                                         ^
+                                                                         ;
+MCAL/GPIO/GPIO_Program.c(187): error: use of undeclared identifier 'STD_TYPES_NOK'
+                                        Local_Error_state = STD_TYPES_NOK
+                                                            ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+7 warnings and 20 errors generated.
+compiling GPIO_Program.c...
+".\Objects\FOTA-ITI-Project.axf" - 35 Error(s), 23 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -167,7 +266,7 @@ Package Vendor: Keil
       Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
       Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
 Target not created.
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

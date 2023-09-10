@@ -7,7 +7,7 @@
 
 #ifndef REPO_MCAL_SYSTK_SYSTK_PRIVATE_H_
 #define REPO_MCAL_SYSTK_SYSTK_PRIVATE_H_
-#include "STD_TYPES.h"
+#include "../../LIB/STD_TYPES.h"
 
 typedef struct
 {
