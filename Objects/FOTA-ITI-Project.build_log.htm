@@ -27,28 +27,6 @@ Project File Date:  09/10/2023
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'FOTA-ITI-Project'
-compiling main.c...
-MCAL/SYSTK/SYSTK_Program.c(16): warning: no previous extern declaration for non-static variable 'G_u8SingleFlag' [-Wmissing-variable-declarations]
-u8 G_u8SingleFlag = 0;
-   ^
-MCAL/SYSTK/SYSTK_Program.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-u8 G_u8SingleFlag = 0;
-^
-MCAL/SYSTK/SYSTK_Program.c(22): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
-                CLEAR_BIT(SYSTK->SYS_CTRL,STK_CTRL_CLKSOURCE);
-                ^
-MCAL/SYSTK/SYSTK_Program.c(91): error: use of undeclared identifier 'NULL'
-    if (STK_CallBack != NULL)
-                        ^
-MCAL/SYSTK/SYSTK_Program.c(89): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
-void SysTick_Handler(void)
-     ^
-MCAL/SYSTK/SYSTK_Program.c(89): note: declare 'static' if the function is not intended to be used outside of this translation unit
-void SysTick_Handler(void)
-^
-static 
-3 warnings and 1 error generated.
-compiling SYSTK_Program.c...
 MCAL/RCC/RCC_Program.c(12): warning: In file included from...
 ./MCAL/RCC/RCC_Interface.h(20): warning: // comments are not allowed in this language [-Wcomment]
 //Peripherals IDS
@@ -124,6 +102,45 @@ u8 RCC_u8DisableHSI(void){
 static 
 8 warnings and 14 errors generated.
 compiling RCC_Program.c...
+APP/main.c(16): warning: In file included from...
+./HAL/LCD\LCD_Interface.h(83): error: unknown type name 'u8'
+void LCD_voidSendCmd(u8 Copy_u8Cmd);
+                     ^
+./HAL/LCD\LCD_Interface.h(94): error: unknown type name 'u8'
+void LCD_voidSendChar(u8 Copy_u8Data);
+                      ^
+./HAL/LCD\LCD_Interface.h(105): error: unknown type name 'u8'
+void LCD_voidSendString(u8 *Copy_ptrData);
+                        ^
+./HAL/LCD\LCD_Interface.h(127): error: unknown type name 'u8'
+void LCD_voidMoveCursor(u8 Copy_u8Row,u8 Copy_u8Coloumn);
+                        ^
+./HAL/LCD\LCD_Interface.h(127): error: unknown type name 'u8'
+void LCD_voidMoveCursor(u8 Copy_u8Row,u8 Copy_u8Coloumn);
+                                      ^
+5 errors generated.
+compiling main.c...
+MCAL/SYSTK/SYSTK_Program.c(16): warning: no previous extern declaration for non-static variable 'G_u8SingleFlag' [-Wmissing-variable-declarations]
+u8 G_u8SingleFlag = 0;
+   ^
+MCAL/SYSTK/SYSTK_Program.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u8 G_u8SingleFlag = 0;
+^
+MCAL/SYSTK/SYSTK_Program.c(22): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
+                CLEAR_BIT(SYSTK->SYS_CTRL,STK_CTRL_CLKSOURCE);
+                ^
+MCAL/SYSTK/SYSTK_Program.c(91): error: use of undeclared identifier 'NULL'
+    if (STK_CallBack != NULL)
+                        ^
+MCAL/SYSTK/SYSTK_Program.c(89): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+void SysTick_Handler(void)
+     ^
+MCAL/SYSTK/SYSTK_Program.c(89): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_Handler(void)
+^
+static 
+3 warnings and 1 error generated.
+compiling SYSTK_Program.c...
 MCAL/FLASH/FLASH_Program.c(57): warning: implicit declaration of function 'CLEAR_BIT' [-Wimplicit-function-declaration]
         CLEAR_BIT(FLASH->FLASH_CR,SNB3);
         ^
@@ -234,7 +251,7 @@ MCAL/GPIO/GPIO_Program.c(187): error: use of undeclared identifier 'STD_TYPES_NO
 fatal error: too many errors emitted, stopping now [-ferror-limit=]
 7 warnings and 20 errors generated.
 compiling GPIO_Program.c...
-".\Objects\FOTA-ITI-Project.axf" - 35 Error(s), 23 Warning(s).
+".\Objects\FOTA-ITI-Project.axf" - 40 Error(s), 23 Warning(s).
 
 <h2>Software Packages used:</h2>
 
