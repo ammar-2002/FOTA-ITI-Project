@@ -10,9 +10,9 @@
  * *********************************************************************************************************
  * *********************************************************************************************************
  */
-#include "../../STD_TYPES.h"
-#include "../../BIT_MATHS.h"
-#include "GPIO_INTERFACE.h"
+#include "STD_TYPES.h"
+#include "BIT_MATHS.h"
+#include "GPIO_Interface.h"
 #include "GPIO_Private.h"
 #include "GPIO_Config.h"
 
